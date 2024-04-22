@@ -7,3 +7,26 @@ th, td .posts {
   text-align: left;
   border-bottom: 1px solid #ddd;
 }
+
+@media screen and (max-width: 600px) {
+  table #mainTable {
+    border: 0;
+  }
+  table #mainTable thead {
+    display: none;
+  }
+  table #mainTable tr {
+    margin-bottom: 10px;
+    display: block;
+    border: 1px solid #ddd;
+  }
+  table #mainTable td {
+    display: block;
+    text-align: right;
+  }
+  table #mainTable td::before {
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+  } 
+}
