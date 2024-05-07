@@ -8,6 +8,41 @@ th, td .posts {
   border-bottom: 1px solid #ddd;
 }
 
+.dropdown {
+  position: relative;
+  display: inline-block;
+  background-color: #fffb0f;
+  width: 40px;
+  height: 30px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  list-style-type: none;
+  text-decoration: none;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content ul li a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  list-style-type: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
 @media screen and (max-width: 600px) {
   table #mainTable {
     border: 0;
