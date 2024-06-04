@@ -1,11 +1,15 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #f8f9fa;
+  background-color: #000;
 }
+
 
 h1 {
   text-align: center;
   margin-top: 50px;
+  font-size: 36px;
+  color: #f7f304;
+  font-style: condensed;
 }
 
 form {
@@ -42,29 +46,30 @@ input:focus {
     outline: 1px solid blue;
 }
 
-.submit-button {
+.home-button {
   display: inline-block;
-  margin-top: 5px;
-  margin-left: 350px;
+  margin-top: 50px;
+  margin-left: 200px;
   width: 100px;
-  height: 30px;
-  font-size: 16px;
-  padding: 3px;
+  height: 50px;
+  inline-size: 100px;
+  font-size: 14px;
+  padding: 5px;
   box-sizing: border-box;
-  border: 1px solid #dfe1e5;
+  border: 3px solid #dfe1e5;
   border-radius: 24px;
   background-color: #f8f9fa;
   cursor: pointer;
 }
 
-.submit-button:hover {
+.home-button:hover {
   background-color: #f0f1f3;
 }
 
-.submit-button:active {
+.home-button:active {
   background-color: #e9ebec;
 }
 
-.submit-button:focus {
+.home-button:focus {
   outline: 5px solid blue;
 }
