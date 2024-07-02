@@ -1,0 +1,44 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #000;
+}
+
+div .posts {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  margin: 10px;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+div {
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 600px) {
+  span #main {
+    border: 0;
+  }
+  span #main div {
+    display: none;
+  }
+  span #main div {
+    margin-bottom: 10px;
+    display: block;
+    border: 1px solid #ddd;
+  }
+  span #main div {
+    display: block;
+    text-align: right;
+  }
+  span #main div::before {
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+  } 
+}
