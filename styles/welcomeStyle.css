@@ -1,6 +1,7 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #000;
+  background-color: #030420f1;
+  color: #fff;
 }
 
 div .posts {
@@ -8,6 +9,12 @@ div .posts {
   text-align: left;
   border-bottom: 1px solid #ddd;
   margin: 10px;
+}
+
+#navDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .main {
@@ -21,22 +28,22 @@ div {
 }
 
 @media screen and (max-width: 600px) {
-  span #main {
+  main {
     border: 0;
   }
-  span #main div {
+  main div {
     display: none;
   }
-  span #main div {
+  main div {
     margin-bottom: 10px;
     display: block;
     border: 1px solid #ddd;
   }
-  span #main div {
+  main div {
     display: block;
     text-align: right;
   }
-  span #main div::before {
+  main div::before {
     content: attr(data-label);
     float: left;
     font-weight: bold;

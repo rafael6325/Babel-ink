@@ -10,6 +10,7 @@ async function searchApi() {
     document.getElementById('bairro').value = endereco.bairro;
     document.getElementById('cidade').value = endereco.localidade;
     document.getElementById('uf').value = endereco.uf;
+    
   } catch (error) {
     console.error(error);
   }

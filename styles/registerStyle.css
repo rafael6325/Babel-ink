@@ -1,0 +1,30 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #030420f1;
+}
+
+h1 {
+  font-size: 36px;
+  color: aliceblue;
+  font-style: condensed;
+  text-align: center;
+}
+
+label {
+  font-size: 24px;
+}
+
+#registerForm {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#registerForm input {
+  border: 1px solid #dfe1e5;
+  font-size: 16px;
+  height: 30px;
+  padding: 5px;
+  width: 50%;
+}

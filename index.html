@@ -8,19 +8,19 @@
   <body>
       <Main>
         <h1>BaBel Ink</h1>
-        <h2 style="color: aliceblue;">Log in to your account</h2>
-        <form action="pages/welcome.html">
+        <h2 style="color: aliceblue;">Login</h2>
+        <form id="loginForm" action="pages/welcome.html">
           <div class="form-group">
-            <label for="username" style="color: aliceblue;">Username:</label>
+            <label for="username" style="color: aliceblue;">Login:</label>
             <input type="text" class="form-control" id="username" name="username">
           </div>
           <div class="form-group">
-            <label for="password" style="color: aliceblue;">Password:</label>
+            <label for="password" style="color: aliceblue;">Senha:</label>
             <input type="password" class="form-control" id="password" name="password">
           </div>
           <button type="submit" class="btn btn-primary">Log in</button>
-          <button type="button" class="btn btn-secondary" onclick="window.location.href='pages/register.html'">Register</a></button>
-          <button type="button" class="btn btn-secondary" onclick="window.location.href='forgot-password.html'">Forgot Password</button>
+          <button type="button" class="btn btn-secondary" onclick="window.location.href='pages/register.html'">Criar conta</a></button>
+          <button type="button" class="btn btn-secondary" onclick="window.location.href='pages/forgotPassword.html'">Esqueceu sua senha</button>
         </form>
       </Main>
   </body>
