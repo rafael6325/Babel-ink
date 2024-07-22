@@ -20,7 +20,7 @@ function clearPostContent() {
 
 function createPost(event) {
     event.preventDefault();
-    uploadImg()
+    //uploadImg()
     let post = document.getElementById('postText').value;
     if (!post) {
       document.getElementById('nullpost-message').textContent = 'Não pode estar vazio.';
@@ -61,32 +61,32 @@ function createPost(event) {
     clearPostContent();
   };
 
-function uploadImg() { 
+// function uploadImg() { 
 
-    const fileInput = document.getElementById('imageFile');
-    const file = fileInput.files[0];
+//     const fileInput = document.getElementById('imageFile');
+//     const file = fileInput.files[0];
 
-    if (file) {
-        const reader = new FileReader();
+//     if (file) {
+//         const reader = new FileReader();
 
-        reader.onload = function(e) {
-            const imageData = e.target.result;
+//         reader.onload = function(e) {
+//             const imageData = e.target.result;
 
-            // Save image data to localStorage
-            let images = JSON.parse(localStorage.getItem('images')) || [];
-            images.push(imageData);
-            localStorage.setItem('images', JSON.stringify(images));
+//             // Save image data to localStorage
+//             let images = JSON.parse(localStorage.getItem('images')) || [];
+//             images.push(imageData);
+//             localStorage.setItem('images', JSON.stringify(images));
 
-            // Clear the file input
-            fileInput.value = '';
+//             // Clear the file input
+//             fileInput.value = '';
 
-            // Reload the images
-            loadImages();
-        };
+//             // Reload the images
+//             loadImages();
+//         };
 
-        reader.readAsDataURL(file);
-    }
-};
+//         reader.readAsDataURL(file);
+//     }
+// };
 
 function loadImages() {
     const imageContainer = document.getElementById('imageContainer');
