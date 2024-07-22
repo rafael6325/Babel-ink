@@ -1,7 +1,12 @@
+document.addEventListener('DOMContentLoaded', (event) => {
+  loadPosts();
+});
+
 function createPost() {
     event.preventDefault();
-    const post = document.getElementById('postText').value;
+    let post = document.getElementById('postText').value;
     let postContainer = document.getElementById('mainPosts');
+    const date = new Date().toLocaleString();
 
     //console.log(post);
     //console.log(postContainer.innerHTML);
@@ -15,7 +20,7 @@ function createPost() {
                 ${post}
                 </p>
                 <div class="dateHour">
-                  <p>data - horario</p>
+                  <p>${date}</p>
                 </div>
                 <div class="actionBtnPost">
                   <button type="button" class="like btn btn-primary" onclick="likeCount()">Curtir</button>
@@ -25,6 +30,29 @@ function createPost() {
             </div>
           </div>`;
 
+    let posts = JSON.parse(localStorage.getItem('posts')) || [];
+    posts.push(newPost);
+    
+    localStorage.setItem('posts', JSON.stringify(posts));
+
     const addPost = postContainer.innerHTML + newPost;
-    return postContainer.innerHTML = addPost;
+    postContainer.innerHTML = addPost;
+
+  }
+
+  function renderPosts() {
+    let postContainer = document.getElementById('mainPosts');
+    postContainer.innerHTML = '';
+
+    let posts = JSON.parse(localStorage.getItem('posts')) || [];
+
+    posts.forEach(post => {
+      const postHTML = post;
+      const histPost = postContainer.innerHTML + postHTML;
+      postContainer.innerHTML = histPost;
+    });
+  }
+
+  function loadPosts() {
+    renderPosts();
   }
