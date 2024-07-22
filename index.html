@@ -1,28 +1,54 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <script src="scripts/home.js"></script>
-    <title>Login</title>
-  </head>
-  <body>
-      <Main>
-        <h1>BaBel Ink</h1>
-        <h2 style="color: aliceblue;">Login</h2>
-        <form id="loginForm" action="pages/welcome.html">
-          <div class="form-group">
-            <label for="username" style="color: aliceblue;">Login:</label>
-            <input type="text" class="form-control" id="username" name="username">
-          </div>
-          <div class="form-group">
-            <label for="password" style="color: aliceblue;">Senha:</label>
-            <input type="password" class="form-control" id="password" name="password">
-          </div>
-          <button type="submit" class="btn btn-primary">Log in</button>
-          <button type="button" class="btn btn-secondary" onclick="window.location.href='pages/register.html'">Criar conta</a></button>
-          <button type="button" class="btn btn-secondary" onclick="window.location.href='pages/forgotPassword.html'">Esqueceu sua senha</button>
-        </form>
-      </Main>
-  </body>
-  <link rel="stylesheet" href="styles/style.css">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <img src="/imgs/pageIcon.jpeg" alt="icone-torre-de-babel" class="icon"> BABELINK
+        </div>
+    </div>
+    <div class="main-container">
+        <div class="image-container">
+            <img src="/imgs/loginImg.png" alt="torre-de-babel">
+            <h2>Conectando o mundo</h2>
+        </div>
+        <div class="form-wrapper">
+            <div id="login-form" class="form-container">
+                <h2>Login</h2>
+                <input type="text" id="login-email" placeholder="Email">
+                <input type="password" id="login-password" placeholder="Password">
+                <button onclick="login()">Login</button>
+                <button onclick="showRegisterForm()">Cadastrar-se</button>
+                <button onclick="showForgotPasswordForm()">Esqueci a senha</button>
+                <p id="login-message" class="message"></p>
+            </div>
+            
+            <div id="register-form" class="form-container hidden">
+                <h2>Cadastrar-se</h2>
+                <input type="text" id="register-name" placeholder="Nome">
+                <input type="text" id="register-email" placeholder="Email">
+                <input type="password" id="register-password" placeholder="Senha">
+                <input type="password" id="confirm-password" placeholder="Confirmar Senha">
+                <button onclick="register()">Cadastrar</button>
+                <button onclick="showLoginForm()">Voltar para Login</button>
+                <p id="register-message" class="message"></p>
+            </div>
+            
+            <div id="forgot-password-form" class="form-container hidden">
+                <h2>Esqueci a Senha</h2>
+                <input type="text" id="forgot-email" placeholder="Email">
+                <button onclick="forgotPassword()">Enviar</button>
+                <button onclick="showLoginForm()">Voltar para Login</button>
+                <p id="forgot-message" class="message"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="/scripts/login.js"></script>
+</body>
 </html>
