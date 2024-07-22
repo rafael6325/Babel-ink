@@ -32,7 +32,7 @@ function login() {
 
   const user = users.find(user => user.email === email && user.password === password);
   if (user) {
-      window.location.href = '/pages/welcome.html';
+      window.location.href = '../pages/welcome.html';
   } else {
       document.getElementById('login-message').textContent = 'Usuário não cadastrado ou senha incorreta.';
   }
