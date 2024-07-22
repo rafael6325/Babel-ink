@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', (event) => {
   loadPosts();
   loadUser();
-  loadImages();
+  //loadImages();
 });
 
 function loadUser() {
